@@ -7,6 +7,8 @@ class Queue:
         return self.tail == -1  
     def isFull(self):
         return self.tail + 1 == self.size
+    def setCapacity(self, size):
+        self.size = size
     def first(self):  
         if self.isEmpty():
             raise Exception("QueueIsEmpty")  
