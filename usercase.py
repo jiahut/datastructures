@@ -1,62 +1,93 @@
-from Stack import *
-from Queue import *
+from Stack import Stack
+from Queue import Queue
+from BinaryTree import BinaryTree
 
-def trace(obj):
+def trrce(obj):
 	print(obj.info())
 
 
-print("--------------stack----------------")
+print("--------------Stack----------------")
 
 s = Stack(5)  
 s.push(1)
-trace(s)
+trrce(s)
 s.push(2)
-trace(s)  
+trrce(s)  
 s.push(3)
-trace(s)  
+trrce(s)  
 s.push(4)
-trace(s)  
+trrce(s)  
 s.push(5)  
-trace(s)
+trrce(s)
 print("head = ", s.head())
 print("tail = ", s.tail())
 print("isFull? ", s.isFull())
 s.pop()  
-trace(s)
+trrce(s)
 s.pop()
-trace(s)
+trrce(s)
 s.pop()
-trace(s)
+trrce(s)
 s.pop()
-trace(s)
+trrce(s)
 s.pop()
-trace(s)
+trrce(s)
 print("isEmpty? ",s.isEmpty())
 
-print("--------------quese----------------")
+print("--------------Queue----------------")
 
 q = Queue(5)
 q.add(1)
-trace(q)
+trrce(q)
 q.add(2)
-trace(q)
+trrce(q)
 q.add(3)
-trace(q)
+trrce(q)
 q.add(4)
-trace(q)
+trrce(q)
 q.add(5)
-trace(q)
+trrce(q)
 print("first = ", q.first())
 print("last = ", q.last())
 print("isFull? ", q.isFull())
 q.remove()
-trace(q)
+trrce(q)
 q.remove()
-trace(q)
+trrce(q)
 q.remove()
-trace(q)
+trrce(q)
 q.remove()
-trace(q)
+trrce(q)
 q.remove()
-trace(q)
+trrce(q)
 print("isEmpty? ",s.isEmpty())
+
+print("--------------BinaryTree----------------")
+
+tree = '''
+
+		1
+	2		3	
+4				5
+
+'''
+print(tree)
+r = BinaryTree() #root
+rrr = BinaryTree() 
+rrr.makeTree(4,None,None)
+rr = BinaryTree()
+rr.makeTree(2,rrr,None)
+rll = BinaryTree()
+rll.makeTree(5,None,None) 
+rl = BinaryTree()
+rl.makeTree(3,None,rll) 
+r.makeTree(1,rr,rl)
+
+print("preOrder")
+r.preOrder(r)  
+print("inOrder")
+r.inOrder(r)  
+print("postOrder")
+r.postOrder(r)  
+print("levelOrder")
+r.levelOrder(r) 
