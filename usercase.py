@@ -66,21 +66,21 @@ print("--------------BinaryTree----------------")
 
 tree = '''
 
-		1
-	2		3	
-4				5
+			1
+		2		3	
+	4				5	
 
 '''
 print(tree)
 r = BinaryTree() #root
-rrr = BinaryTree() 
-rrr.makeTree(4,None,None)
+rll = BinaryTree() 
+rll.makeTree(4,None,None)
 rr = BinaryTree()
-rr.makeTree(2,rrr,None)
-rll = BinaryTree()
-rll.makeTree(5,None,None) 
+rr.makeTree(2,rll,None)
+rrr = BinaryTree()
+rrr.makeTree(5,None,None) 
 rl = BinaryTree()
-rl.makeTree(3,None,rll) 
+rl.makeTree(3,None,rrr) 
 r.makeTree(1,rr,rl)
 
 print("preOrder")
